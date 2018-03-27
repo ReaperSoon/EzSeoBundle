@@ -6,10 +6,10 @@
  * Time: 15:30
  */
 
-namespace Smile\EzSeoBundle\Common;
+namespace SteveCohen\EzSeoBundle\Common;
 
 use eZ\Publish\API\Repository\Values\Content\Content;
-use Smile\EzSeoBundle\SEO\Providers\AbstractProvider;
+use SteveCohen\EzSeoBundle\SEO\Providers\AbstractProvider;
 
 class ProviderFactory
 {

@@ -6,11 +6,11 @@
  * Time: 14:46
  */
 
-namespace Smile\EzSeoBundle\DependencyInjection;
+namespace SteveCohen\EzSeoBundle\DependencyInjection;
 
 
-use Smile\EzSeoBundle\Common\ProviderAggregator;
-use Smile\EzSeoBundle\Common\ProviderFactory;
+use SteveCohen\EzSeoBundle\Common\ProviderAggregator;
+use SteveCohen\EzSeoBundle\Common\ProviderFactory;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -28,18 +28,18 @@ class AddProvidersPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition("smile.ez_seo.provider_aggregator")) {
+        if (!$container->hasDefinition("stevecohen.ez_seo.provider_aggregator")) {
             return;
         }
-        $providerAggregator = $container->getDefinition("smile.ez_seo.provider_aggregator");
+        $providerAggregator = $container->getDefinition("stevecohen.ez_seo.provider_aggregator");
         $providers = [];
 
-        $configs = $container->getExtensionConfig('smile_ez_seo');
+        $configs = $container->getExtensionConfig('stevecohen_ez_seo');
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
         foreach ($config['providers'] as $providerId => $attributes) {
-            $provider = new Definition('Smile\EzSeoBundle\Common\ProviderFactory', array($providerId, $attributes['class']));
+            $provider = new Definition('SteveCohen\EzSeoBundle\Common\ProviderFactory', array($providerId, $attributes['class']));
             $providers[] = $provider;
         }
         $providerAggregator->addMethodCall('registerProviders', [$providers]);

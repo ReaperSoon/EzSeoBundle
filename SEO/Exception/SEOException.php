@@ -1,6 +1,6 @@
 <?php
 
-namespace Smile\Gs1Bundle\SEO\Exception;
+namespace SteveCohen\Gs1Bundle\SEO\Exception;
 
 /**
  * Created by PhpStorm.

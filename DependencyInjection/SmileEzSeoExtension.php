@@ -1,8 +1,8 @@
 <?php
 
-namespace Smile\EzSeoBundle\DependencyInjection;
+namespace SteveCohen\EzSeoBundle\DependencyInjection;
 
-use Smile\EzSeoBundle\Common\ProviderFactory;
+use SteveCohen\EzSeoBundle\Common\ProviderFactory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SmileEzSeoExtension extends Extension
+class SteveCohenEzSeoExtension extends Extension
 {
     /**
      * {@inheritdoc}

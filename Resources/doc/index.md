@@ -9,7 +9,7 @@ following command to download the latest stable version of this bundle:
 
 .. code-block:: bash
 
-    $ composer require smile/ezseobundle "~1.0.*"
+    $ composer require stevecohen/ezseobundle "~1.0.*"
 
 This command requires you to have Composer installed globally, as explained
 in the `installation chapter`_ of the Composer documentation.
@@ -33,7 +33,7 @@ in the ``app/AppKernel.php`` file of your project:
             $bundles = array(
                 // ...
 
-                new Smile\EzSeoBundle\SmileEzSeoBundle(),
+                new SteveCohen\EzSeoBundle\SteveCohenEzSeoBundle(),
             );
 
             // ...

@@ -1,6 +1,6 @@
 <?php
 
-namespace Smile\EzSeoBundle\DependencyInjection;
+namespace SteveCohen\EzSeoBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('smile_ez_seo');
+        $rootNode = $treeBuilder->root('stevecohen_ez_seo');
 
         $rootNode
             ->children()

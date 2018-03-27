@@ -1,5 +1,5 @@
 {
-    "name" : "smile/ezseobundle",
+    "name" : "stevecohen/ezseobundle",
     "description" : "Write your SEO for eZPublish easily",
     "type" : "symfony-bundle",
     "authors" : [{
@@ -17,10 +17,10 @@
     },
     "autoload" : {
         "psr-0" : {
-            "Smile\\EzSeoBundle" : ""
+            "SteveCohen\\EzSeoBundle" : ""
         }
     },
-    "target-dir" : "Smile/EzSeoBundle",
+    "target-dir" : "SteveCohen/EzSeoBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"

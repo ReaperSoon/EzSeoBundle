@@ -1,8 +1,8 @@
 <?php
 
-namespace Smile\EzSeoBundle\SEO\Providers;
+namespace SteveCohen\EzSeoBundle\SEO\Providers;
 
-use Smile\Gs1Bundle\SEO\Exception\SEOException;
+use SteveCohen\Gs1Bundle\SEO\Exception\SEOException;
 use eZ\Publish\API\Repository\Values\Content\Content;
 
 /**
