@@ -1,0 +1,6 @@
+services:
+    smile.ez_seo.provider_aggregator:
+        class: Smile\EzSeoBundle\Common\ProviderAggregator
+    smile.ez_seo:
+        class: Smile\EzSeoBundle\Services\SmileSeoProvider
+        arguments: ["@ezpublish.api.repository", "@smile.ez_seo.provider_aggregator"]
