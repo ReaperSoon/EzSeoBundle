@@ -68,6 +68,9 @@ use Smile\EzSeoBundle\SEO\Providers\AbstractProvider;
 
 class ArticleProvider extends AbstractProvider
 {
+    /**
+    * @override
+    */
     function getMetaTitle()
     {
         /* Get first defined attribute */
@@ -81,6 +84,9 @@ class ArticleProvider extends AbstractProvider
         return $metaTitle;
     }
 
+    /**
+    * @override
+    */
     function getMetaDescription()
     {
         /* Get first defined attribute */
@@ -94,6 +100,9 @@ class ArticleProvider extends AbstractProvider
         return $metaDesc;
     }
 
+    /**
+    * @override
+    */
     function getClassName()
     {
         return "article";
