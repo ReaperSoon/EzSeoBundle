@@ -50,7 +50,7 @@ Step 3: Create your own provider
 --------------------------------
 
 **app/config.yml**
-```
+```yml
 smile_ez_seo:
     providers:
         article:
@@ -59,7 +59,7 @@ smile_ez_seo:
 
 **Provider example:**
 
-```
+```php
 <?php
 
 namespace ACME\ACMEBundle\SEO\Providers;
