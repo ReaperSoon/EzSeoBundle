@@ -123,4 +123,16 @@ class ArticleProvider extends AbstractProvider
 
 ```
 
-Documentation in progress...
+Step 4: Include SEO in your pagelayout
+--------------------------------------
+
+In your pagelayout.html.twig add this line between <head> tags
+
+```twig
+{{ render( controller( 'SmileEzSeoBundle:Seo:showMetaSeo', { content: content, prefix: "AMCE - " } ) ) }}
+```
+
+* content*: Your current *content* (eZ\Publish\API\Repository\Values\Content)
+* prefix: A prefix for your Meta Title
+
+*Required
