@@ -54,7 +54,7 @@ Step 3: Create your own provider
 smile_ez_seo:
     providers:
         article:
-            class: Smile\Gs1Bundle\SEO\Providers\ArticleProvider
+            class: ACME\ACMEBundle\SEO\Providers\ArticleProvider
 ```
 
 **Provider example:**
