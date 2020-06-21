@@ -1,12 +1,12 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle;
+namespace SteveCohenFR\EzSeoBundle;
 
-use SteveCohen\EzSeoBundle\DependencyInjection\AddProvidersPass;
+use SteveCohenFR\EzSeoBundle\DependencyInjection\AddProvidersPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SteveCohenEzSeoBundle extends Bundle
+class SteveCohenFREzSeoBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

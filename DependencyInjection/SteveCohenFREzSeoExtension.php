@@ -1,8 +1,8 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle\DependencyInjection;
+namespace SteveCohenFR\EzSeoBundle\DependencyInjection;
 
-use SteveCohen\EzSeoBundle\Common\ProviderFactory;
+use SteveCohenFR\EzSeoBundle\Common\ProviderFactory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SteveCohenEzSeoExtension extends Extension
+class SteveCohenFREzSeoExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -25,5 +25,7 @@ class SteveCohenEzSeoExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+        $definition = $container->getDefinition('stevecohenfr.ez_seo.config');
+        $definition->replaceArgument(0, $config['config']);
     }
 }

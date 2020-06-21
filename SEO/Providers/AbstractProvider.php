@@ -1,8 +1,8 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle\SEO\Providers;
+namespace SteveCohenFR\EzSeoBundle\SEO\Providers;
 
-use SteveCohen\Gs1Bundle\SEO\Exception\SEOException;
+use SteveCohenFR\EzSeoBundle\SEO\Exception\SEOException;
 use eZ\Publish\API\Repository\Values\Content\Content;
 
 /**

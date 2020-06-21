@@ -1,8 +1,8 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle\Common;
+namespace SteveCohenFR\EzSeoBundle\Common;
 
-use SteveCohen\EzSeoBundle\Common\ProviderFactory as Provider;
+use SteveCohenFR\EzSeoBundle\Common\ProviderFactory as Provider;
 
 class ProviderAggregator
 {

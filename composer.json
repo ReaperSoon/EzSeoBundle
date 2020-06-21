@@ -1,29 +1,39 @@
 {
-    "name" : "stevecohen/ezseobundle",
-    "description" : "Write your SEO for eZPublish easily",
+    "name" : "stevecohenfr/ezseobundle",
+    "description" : "Write your SEO for eZ Platform easily",
     "type" : "symfony-bundle",
     "authors" : [{
         "name" : "Steve Cohen",
-        "email" : "cohensteve@hotmail.fr"
+        "email" : "cohensteve@hotmail.fr",
+        "homepage": "https://stevecohen.fr"
     }],
     "keywords" : [
-        "ezpublish bundle seo"
+        "ezpublish",
+        "ezplatform",
+        "stevecohen",
+        "stevecohenfr",
+        "bundle",
+        "seo",
+        "extension",
+        "meta",
+        "title",
+        "description"
     ],
+    "homepage": "https://github.com/stevecohenfr/EzSeoBundle",
     "license" : [
         "MIT"
     ],
     "require" : {
-	"ezsystems/ezpublish-kernel": "~5.4|~6.0@dev"
+        "ezsystems/ezpublish-kernel": "^6.13@dev || ^7.5@dev"
     },
     "autoload" : {
-        "psr-0" : {
-            "SteveCohen\\EzSeoBundle" : ""
+        "psr-4" : {
+            "SteveCohenFR\\EzSeoBundle" : ""
         }
     },
-    "target-dir" : "SteveCohen/EzSeoBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         }
     }
 }

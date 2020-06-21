@@ -1,6 +1,6 @@
 <?php
 
-namespace SteveCohen\Gs1Bundle\SEO\Exception;
+namespace SteveCohenFR\EzSeoBundle\SEO\Exception;
 
 /**
  * Created by PhpStorm.

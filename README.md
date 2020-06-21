@@ -11,7 +11,7 @@ following command to download the latest stable version of this bundle:
 
 ```bash
 
-    $ composer require stevecohen/ezseobundle "~1.0.*"
+    $ composer require stevecohenfr/ezseobundle "~1.0.*"
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -24,8 +24,6 @@ Then, enable the bundle by adding it to the list of registered bundles
 in the ``app/AppKernel.php`` file of your project:
 
 ```php
-
-    <?php
     // app/AppKernel.php
 
     // ...
@@ -36,7 +34,7 @@ in the ``app/AppKernel.php`` file of your project:
             $bundles = array(
                 // ...
 
-                new SteveCohen\EzSeoBundle\SteveCohenEzSeoBundle(),
+                new SteveCohenFR\EzSeoBundle\SteveCohenFREzSeoBundle(),
             );
 
             // ...

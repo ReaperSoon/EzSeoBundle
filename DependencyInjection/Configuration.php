@@ -1,6 +1,6 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle\DependencyInjection;
+namespace SteveCohenFR\EzSeoBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('stevecohen_ez_seo');
+        $rootNode = $treeBuilder->root('steve_cohen_fr_ez_seo');
 
         $rootNode
             ->children()
@@ -26,8 +26,23 @@ class Configuration implements ConfigurationInterface
                     ->prototype('array')
                         ->children()
                             ->scalarNode('class')->end()
+                        ->end()
                     ->end()
-                ->end()
+                ->end() // providers
+                ->arrayNode("config")
+                    ->children()
+                        ->arrayNode("meta_title")
+                            ->children()
+                                ->integerNode('length')->defaultValue(60)->end()
+                            ->end()
+                        ->end() // meta_title
+                        ->arrayNode("meta_description")
+                            ->children()
+                                ->integerNode('length')->defaultValue(158)->end()
+                            ->end()
+                        ->end() // meta_description
+                    ->end()
+                ->end() // config
             ->end()
         ;
 

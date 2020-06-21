@@ -9,14 +9,14 @@
                 {% set metaTitle = metaTitle ~ seo.suffix %}
             {% endif %}
             {% if metaTitle is not null and metaTitle is not empty %}
-                <title>{{ metaTitle[:50] }}</title>
-                <meta name="title" content="{{ metaTitle[:50] }}"/>
+                <title>{{ metaTitle[:config["meta_title"]["length"]] }}</title>
+                <meta name="title" content="{{ metaTitle[:config["meta_title"]["length"]] }}"/>
             {% endif %}
         {% endblock %}
         {% block seo_meta_description %}
             {% set metaDesc = seo.getMetaDescription()|striptags|trim %}
             {% if metaDesc is not null and metaDesc is not empty %}
-                <meta name="description" content="{{ metaDesc[:280] }}"/>
+                <meta name="description" content="{{ metaDesc[:config["meta_description"]["length"]] }}"/>
             {% endif %}
         {% endblock %}
     {% endblock %}

@@ -1,14 +1,14 @@
 <?php
 
-namespace SteveCohen\EzSeoBundle\Services;
+namespace SteveCohenFR\EzSeoBundle\Services;
 
 use eZ\Publish\Core\Repository\ContentTypeService;
 use eZ\Publish\Core\SignalSlot\Repository;
 use eZ\Publish\API\Repository\Values\Content\Content;
-use SteveCohen\EzSeoBundle\Common\ProviderAggregator;
-use SteveCohen\EzSeoBundle\SEO\Providers\AbstractProvider;
+use SteveCohenFR\EzSeoBundle\Common\ProviderAggregator;
+use SteveCohenFR\EzSeoBundle\SEO\Providers\AbstractProvider;
 
-    class SteveCohenSeoProvider
+    class SteveCohenFRSeoProvider
     {
         /**
          * @var ContentTypeService
