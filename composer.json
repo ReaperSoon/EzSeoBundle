@@ -1,7 +1,7 @@
 {
     "name" : "stevecohenfr/ezseobundle",
     "description" : "Write your SEO for eZ Platform easily",
-    "type" : "symfony-bundle",
+    "type" : "ezplatform-bundle",
     "authors" : [{
         "name" : "Steve Cohen",
         "email" : "cohensteve@hotmail.fr",
@@ -24,6 +24,7 @@
         "MIT"
     ],
     "require" : {
+        "php": "^5.6 || ^7.1",
         "ezsystems/ezpublish-kernel": "^6.13@dev || ^7.5@dev"
     },
     "autoload" : {
@@ -33,7 +34,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "1.2.x-dev"
         }
     }
 }

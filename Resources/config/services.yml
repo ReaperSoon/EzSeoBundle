@@ -8,7 +8,7 @@ services:
         class: '%stevecohenfr.ez_seo.provider_aggregator.class%'
     stevecohenfr.ez_seo.seo_provider:
         class: '%stevecohenfr.ez_seo.seo_provider.class%'
-        arguments: ["@ezpublish.api.repository", "@stevecohenfr.ez_seo.provider_aggregator"]
+        arguments: ["@service_container", "@stevecohenfr.ez_seo.provider_aggregator"]
     stevecohenfr.ez_seo.config:
         class: '%stevecohenfr.ez_seo.config.class%'
         arguments: [""]

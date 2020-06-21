@@ -10,6 +10,7 @@ namespace SteveCohenFR\EzSeoBundle\Common;
 
 use eZ\Publish\API\Repository\Values\Content\Content;
 use SteveCohenFR\EzSeoBundle\SEO\Providers\AbstractProvider;
+use Symfony\Component\DependencyInjection\Container;
 
 class ProviderFactory
 {
@@ -23,12 +24,14 @@ class ProviderFactory
     }
 
     /**
-     * @param Content $content
-     * @return AbstractProvider
+     * @param Content   $content
+     * @param Container $container
+     *
+     * @return mixed
      */
-    public function get( Content $content )
+    public function get( Content $content, Container $container )
     {
-        return new $this->className($content);
+        return new $this->className($content, $container);
     }
 
     /**

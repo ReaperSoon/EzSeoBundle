@@ -7,8 +7,9 @@ use eZ\Publish\Core\SignalSlot\Repository;
 use eZ\Publish\API\Repository\Values\Content\Content;
 use SteveCohenFR\EzSeoBundle\Common\ProviderAggregator;
 use SteveCohenFR\EzSeoBundle\SEO\Providers\AbstractProvider;
+use Symfony\Component\DependencyInjection\Container;
 
-    class SteveCohenFRSeoProvider
+class SteveCohenFRSeoProvider
     {
         /**
          * @var ContentTypeService
@@ -20,9 +21,13 @@ use SteveCohenFR\EzSeoBundle\SEO\Providers\AbstractProvider;
          */
         private $providerAggregator;
 
-        public function __construct( Repository $repository, ProviderAggregator $providerAggregator ) {
+        private $container;
+
+        public function __construct( Container $container, ProviderAggregator $providerAggregator ) {
+            $repository = $container->get("ezpublish.signalslot.repository");
             $this->contentTypeService = $repository->getContentTypeService();
             $this->providerAggregator = $providerAggregator;
+            $this->container = $container;
         }
 
         /**
@@ -39,7 +44,7 @@ use SteveCohenFR\EzSeoBundle\SEO\Providers\AbstractProvider;
             if ($this->providerAggregator->hasProvider($contentType->identifier))
             {
                 /** @var AbstractProvider $provider */
-                $provider = $this->providerAggregator->getProvider($contentType->identifier)->get( $content );
+                $provider = $this->providerAggregator->getProvider($contentType->identifier)->get( $content, $this->container );
                 $provider->setPrefix($prefix)->setSuffix($suffix);
             }
 
