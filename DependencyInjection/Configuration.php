@@ -34,11 +34,13 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode("meta_title")
                             ->children()
                                 ->integerNode('length')->defaultValue(60)->end()
+                                ->scalarNode('default')->defaultValue("")->end()
                             ->end()
                         ->end() // meta_title
                         ->arrayNode("meta_description")
                             ->children()
                                 ->integerNode('length')->defaultValue(158)->end()
+                                ->scalarNode('default')->defaultValue("")->end()
                             ->end()
                         ->end() // meta_description
                     ->end()

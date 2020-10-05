@@ -11,10 +11,10 @@ use Symfony\Component\DependencyInjection\Container;
  */
 abstract class AbstractProvider
 {
-    /** @var  Content */
+    /** @var Content|null */
     private $content;
 
-    /** @var Container */
+    /** @var Container|null */
     private $container;
 
     /** @var string */
@@ -23,7 +23,7 @@ abstract class AbstractProvider
     /** @var string */
     protected $suffix;
 
-    function __construct( Content $content, Container $container )
+    function __construct( ?Content $content, ?Container $container )
     {
         $this->content = $content;
         $this->container = $container;
@@ -79,7 +79,7 @@ abstract class AbstractProvider
     }
 
     /**
-     * @return Content the current content
+     * @return Content|null the current content or null if custom route
      */
     public function getContent() {
         return $this->content;

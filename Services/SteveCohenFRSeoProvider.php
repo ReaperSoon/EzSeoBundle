@@ -51,6 +51,20 @@ class SteveCohenFRSeoProvider
             return $provider;
         }
 
+        public function getRouteSEO( string $route, $prefix = "", $suffix = "" )
+        {
+            $provider = null;
+
+            if ($this->providerAggregator->hasProvider($route))
+            {
+                /** @var AbstractProvider $provider */
+                $provider = $this->providerAggregator->getProvider($route)->get( null, $this->container );
+                $provider->setPrefix($prefix)->setSuffix($suffix);
+            }
+
+            return $provider;
+        }
+
         public function getMetaSeo( Content $content )
         {
             $seoProvider = $this->getSEO($content);

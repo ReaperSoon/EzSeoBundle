@@ -24,12 +24,12 @@ class ProviderFactory
     }
 
     /**
-     * @param Content   $content
+     * @param Content|null   $content
      * @param Container $container
      *
      * @return mixed
      */
-    public function get( Content $content, Container $container )
+    public function get( ?Content $content, Container $container )
     {
         return new $this->className($content, $container);
     }
